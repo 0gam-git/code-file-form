@@ -7,11 +7,20 @@ import java.io.FileWriter;
 
 public class ReaderAndWriterForm {
 
-	final String inputFilePath = System.getProperty("user.dir") + "/file/test.json";
-	final String outputFilePath = System.getProperty("user.dir") + "/file/output.json";
+	/*
+	 * final static String inputFilePath = System.getProperty("user.dir") +
+	 * "/file/test.json"; final static String outputFilePath =
+	 * System.getProperty("user.dir") + "/file/output.json";
+	 */
 
-	public static void main(String[] args) {
+	public ReaderAndWriterForm() {
+		// TODO Auto-generated constructor stub
+	}
 
+	public static void main(String[] args2) {
+		ReaderAndWriterForm form = new ReaderAndWriterForm();
+		
+		form.test1();
 	}
 
 	// char 단위 읽어들이는
@@ -19,7 +28,7 @@ public class ReaderAndWriterForm {
 		FileReader fileReader = null;
 
 		try {
-			fileReader = new FileReader(inputFilePath);
+			fileReader = new FileReader(FileInputStreamForm.inputFilePath);
 
 			int i = 0;
 			while (i != -1) {
@@ -43,7 +52,7 @@ public class ReaderAndWriterForm {
 		BufferedReader bufferedReader = null;
 
 		try {
-			fileReader = new FileReader(inputFilePath);
+			fileReader = new FileReader(FileInputStreamForm.inputFilePath);
 			bufferedReader = new BufferedReader(fileReader);
 
 			String string = new String(); // 임시 변수
@@ -71,13 +80,13 @@ public class ReaderAndWriterForm {
 		BufferedWriter bufferedWriter = null;
 
 		try {
-			fileReader = new FileReader(inputFilePath);
+			fileReader = new FileReader(FileInputStreamForm.inputFilePath);
 			bufferedReader = new BufferedReader(fileReader);
 			// bufferedWriter = new BufferedWriter(new
 			// FileWriter("src/ex0801/io/aaa.txt"));
 			// true를 두번째 인수를 넣으면 이어서 저장됨.
 			// 또 특별히 FileWriter 객체를 따로 생성하지 않고 바로 생성하여 파라메터로 넣어줌.
-			bufferedWriter = new BufferedWriter(new FileWriter(outputFilePath, true));
+			bufferedWriter = new BufferedWriter(new FileWriter(FileInputStreamForm.outputFilePath, true));
 
 			String string = new String(); // 임시 변수
 

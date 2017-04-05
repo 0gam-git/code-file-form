@@ -7,11 +7,17 @@ import java.io.FileOutputStream;
 
 public class FileInputStreamForm {
 
-	final String inputFilePath = System.getProperty("user.dir") + "/file/test.json";
-	final String outputFilePath = System.getProperty("user.dir") + "/file/output.json";
+	final static String inputFilePath = System.getProperty("user.dir") + "/file/test.json";
+	final static String outputFilePath = System.getProperty("user.dir") + "/file/output.json";
+
+	public FileInputStreamForm() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public static void main(String[] args) {
+		FileInputStreamForm form = new FileInputStreamForm();
 
+		form.test1();
 	}
 
 	// 바이트 단위로 파일읽기

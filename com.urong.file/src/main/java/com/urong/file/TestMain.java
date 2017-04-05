@@ -6,7 +6,7 @@ public class TestMain {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args1) {
 		System.out.println("Working Directory = " + System.getProperty("user.dir") +"/file/test.json");
 	}
 
